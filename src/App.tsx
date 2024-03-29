@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import WindSpeedDirectionGraph from "./components/WIndSpeedDirectionGraph";
+import WindDirectionSpeedGraph from "./components/WindDirectionSpeedGraph";
 
-function App() {
+const App = () => {
+  // Sample wind data
+  const windData = [
+    { speed: 10, direction: 45 },
+    { speed: 15, direction: 90 },
+    // Add more wind data as needed
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Wind Speed and Direction Graph</h1>
+      <WindSpeedDirectionGraph />
+      <WindDirectionSpeedGraph />
     </div>
   );
-}
+};
 
 export default App;
